@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main style="padding-bottom: 10rem;">
+        <form action="/submit" method="GET" id="contactForm"> 
+            <div>
+                <label for="name">Full Name:</label> 
+                <input type="text" id="name" name="name" placeholder="Your Full Name">
+            </div><br/>
+            <div> 
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" value="anand.singh@indixpert.com"  autofocus multiple> 
+            </div> <br> 
+
+                <label for="password">Password</label>
+                <input type="password" minlength="6" maxlength="16" id="password" placeholder="Password"><br/><br/>
+                <label for="subscribe">Subscribe to our newsletter:</label> 
+                <input type="checkbox" id="subscribe" name="subscribe" value="1"> <br>
+
+            <label>DOB:</label>
+            <input type="date" max="2007-01-01">
+            <label>Gender:</label>
+            <label for="male"><input type="radio" name="gender" id="male" value="m"> Male</label>
+            <label for="female"><input type="radio" name="gender" id="female" value="f"> Female</label>
+            <label for="other"><input type="radio" name="gender" id="other" value="o"> Other</label> <br><br> 
+
+            <label>Skills:</label>
+            <label for="clanguage"><input type="checkbox" name="skills" id="clanguage" value="c"> C</label>
+            <label for="python"><input type="checkbox" name="skills" id="python" value="python"> Python</label>
+            <label for="zira"><input type="checkbox" name="skills" id="zira" value="zira"> Zira</label> 
+            <label for="git"><input type="checkbox" name="skills" id="git" value="Git"> GIT</label> 
+            <label for="html"><input type="checkbox" name="skills" id="html" value="HTML"> HTML</label> 
+            <label for="css"><input type="checkbox" name="skills" id="css" value="css"> CSS</label> 
+            <label for="js"><input type="checkbox" name="skills" id="js" value="Js"> Js</label> <br><br> 
+            <input type="range" min="10" name="range" max="1000">
+            <input type="hidden" name="secret" value="1455454"><br/><br/>
+            <input type="file" name="resume" multiple><br/><br/>
+            <input type="search" name="search" placeholder="Search...."><br/><br/>
+            <label for="country_code">Country Code</label>
+            <input type="text" id="country_code" name="country_code" placeholder="Ex. IND for India"pattern="[A-Za-z]{3}" title="Three letter country code"><br/><br/>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea> <br/><br/>
+
+            <label>Step Example</label>
+            
+            <input type="number" id="quantity" name="quantity" min="3" step="3">
+            <br><br>
+            <label for="browser">Your Fevourite Browser</label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+            </datalist><br/><br/>
+            
+            <textarea rows="4" cols="60" id="message" name="message" required></textarea>
+            
+
+            <button
+                type="submit" >Submit</button><button
+                type="reset">Reset</button>
+
+            
+        </form>
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars" required multiple form="contactForm"> 
+            <option value="">Press 'ctrl' to select multiple</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+    </main>
+</body>
+
+</html>
