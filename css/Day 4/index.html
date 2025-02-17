@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Colors</title>
+        <style>
+            h1{color: red;}
+            .text-pink{color: #cf40cf;}
+            a{color: black;}
+            li{color: rgb(138, 174, 242);}
+            a[href$="void(0)"]{
+                color: hsl(360, 100%, 50%);
+            }
+            p:last-child{background-color: red; color: hsla(0, 0%, 100%, 1); font-weight: 900; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>CSS Colors</h1>
+        </header>
+        <main>
+            <p class="text-pink">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui reiciendis ex fuga sapiente corrupti? Suscipit.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, temporibus.</li>
+                <li>Quibusdam neque voluptas magni temporibus sed iure quasi tempore reprehenderit?</li>
+                <li>Error aliquam reprehenderit quidem officia tempora tempore voluptate iste dignissimos?</li>
+                <li>Tenetur consequatur necessitatibus sed velit perspiciatis consectetur vero cupiditate alias!</li>
+            </ul>
+            <a href="javascript: void(0)">Read More</a>
+            <a href="//google.com">google</a>
+
+            <p><span>Lorem ipsum</span>, dolor sit amet consectetur adipisicing elit. Aliquid eligendi, <strong>a sunt necessitatibus</strong> mollitia sapiente porro corrupti expedita cupiditate dolor.
+                <img src="./hsl-color-codes.png" style="width: 70%; margin-inline: auto" alt="hsl color pallet">
+            </p>
+        </main>
+    </body>
+</html>

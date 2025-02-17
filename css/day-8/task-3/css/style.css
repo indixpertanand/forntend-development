@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{text-decoration: none;}
+
+body{
+    font-family: "Prompt", serif;
+    background-color: #000;
+    padding: 2rem;
+    font-weight: 300;
+    color: #fff;
+}
+/* Typography */
+
+.font-16{font-size: 1rem;}
+.font-20{font-size: 1.23rem;}
+.font-40{font-size: 2.5rem;}
+.font-68{font-size: 4.2rem; line-height: 1.2;letter-spacing: -2px;}
+.font-112{font-size: 5vw; font-weight: 300; line-height: 1.2;letter-spacing: -2px;}
+
+
+
+/* Text STyles */
+.text-right{text-align: right;}
+
+
+/* Header section */
+
+header {border-top: 1px solid #fff4; padding-top: 1rem;}
+header .navbar-brand{max-width: 200px; display: block;}
+.navigation a{text-transform: uppercase; font-size: 1rem; color: #ccc; font-weight: 300;}
+
+main{margin-top: 10rem;}
+
+/* Recent Work */
+.recent-works .section-top{margin-bottom: 5rem;}
+
+.recent-works{padding-bottom: 8rem;}
+.recent-works svg{max-width: 100%;}
+.recent-works .section-bottom{margin-top: 5rem}
+.recent-works .section-bottom span{display: block; margin-bottom: 2.5rem;}
+
+/* Parallax */
+.parallax{height: 85vh; background-position: center; background-size: cover; background-attachment: fixed; background-repeat: no-repeat}
+.parallax-1{background-image: url('../images/1.avif');}
+.parallax-2{background-image: url('../images/2.avif');}
+.parallax-3{background-image: url('../images/3.avif');}
+
+.our-services{padding-top: 5rem;}
+.our-services span{display: block; margin-bottom: 2rem;}

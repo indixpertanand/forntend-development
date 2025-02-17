@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Background</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <style>
+            body{background-color: aquamarine;}
+            .bg-image{background: #000e url('./images/pattern.png') no-repeat center/cover fixed}
+            .bg-gradient{background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(0, 0, 255, 1)); width: fit-content; background-clip: text; padding: 20px; border: 5px solid #0000;}
+            .bg-gradient h2{color: transparent; }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <p class="text-pink">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui reiciendis ex fuga sapiente corrupti? Suscipit.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, temporibus.</li>
+                <li>Quibusdam neque voluptas magni temporibus sed iure quasi tempore reprehenderit?</li>
+                <li>Error aliquam reprehenderit quidem officia tempora tempore voluptate iste dignissimos?</li>
+                <li>Tenetur consequatur necessitatibus sed velit perspiciatis consectetur vero cupiditate alias!</li>
+            </ul>
+            <a href="javascript: void(0)">Read More</a>
+            <a href="//google.com">google</a>
+
+            
+            <div class="bg-image vh-50">
+                <p><span>Lorem ipsum</span>, dolor sit amet consectetur adipisicing elit. Aliquid eligendi, <strong>a sunt necessitatibus</strong> mollitia sapiente porro corrupti expedita cupiditate dolor.
+                </p>
+            </div>
+            
+            <hr>
+            <div class="bg-gradient vh-50">
+                <h2>Indixpert Academy</h2>
+            </div>
+        </main>
+        
+    </body>
+</html>

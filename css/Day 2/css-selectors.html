@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .bg-dark{background: #000;}
+        .bg-white{background: #fff;}
+        .p-4{padding: 2rem;} */
+        *{
+            margin: 0;            
+        }
+        p{margin-bottom: 15px;}
+        div{color: #0F0;}
+        #h1{
+            color: red
+        }
+        .p-4{padding: 4rem}
+        .text-black{
+            color: black;
+        }
+        .text-dark, div{
+            color: #313533;
+        }
+        .text-white{
+            background: red;
+            color:white;
+        }
+        .bg-dark{
+            background-color:#313533 ;
+        }
+        [role="button"]{
+            cursor: pointer;
+        }
+
+        p[class~="mb"]{
+            color: yellow;
+        }
+        /* p[class|="text"]{
+            color: green;
+        }
+        p[class*="text"]{
+            color: red;
+        } */
+
+        .bg-dark p{color: #fff;}
+        .bg-dark > p{color: aqua;}
+        
+        pre ~ div{background: green;}
+        pre + div{background: red;}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">logo</a>
+        <nav>
+            <a href="css-selectors.html#h1">Heading</a>
+            <a href="css-selectors.html#h1">Paragraph 1</a>
+        </nav>
+    </header>
+    <main>
+        <h1 id="h1">Welcome to Indixpert Academy!</h1>
+        <p id="paragraph1" class="text ">This is a paragraph element</p>
+        <p id="paragraph2">This is another paragraph element</p>
+        <p id="paragraph3" class="font-16 text-dark mb-4">This is the third paragraph element</p>
+        <p class="text-red mb-4">This is the third paragraph element</p>
+        <p class="text-yellow mb-4">This is the third paragraph element</p>
+        <div role="button" onclick="alert('Click triggered')">Click For Alert</div><br>
+        <button>Click me</button><br/>
+        <section class="bg-dark text-white p-4">
+            <p>                
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, aliquam error cupiditate possimus facere quaerat?
+            </p>
+            <pre>
+                <code>
+                .bg-dark p{color: #fff}                    
+                </code>
+            </pre>
+            <div class="p-4 bg-white">                
+                <p>Paragraph Inside div 1</p>
+                <p>Paragraph Inside div 2</p>
+                <p>Paragraph Inside div 3</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, magnam?</p>
+        
+            <div class="content">
+                <h1>title</h1>
+            </div><br>
+            <div class="content">
+                <h2>heading</h2>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
