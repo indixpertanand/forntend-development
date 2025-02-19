@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        ul{
+            margin-top: 0;
+            list-style-type: square;
+        }
+        ol{
+            list-style-type:upper-alpha;
+        }
+        ol ul{
+            /* list-style-type: disc; */
+            list-style-image: url('./image/tick-circle.svg');
+            list-style-position: outside;
+            list-style: none;
+            padding-left: 15px;
+        }
+        ol ul li::before{
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-top: 3px;
+            margin-right: 10px;
+            background: url('./image/tick-circle.svg') no-repeat center/contain;
+        }
+        ol { list-style: none; counter-reset: my-counter; }
+        ol li { counter-increment: my-counter; position: relative; padding-left: 30px; }
+        ol li::before { content: "Item "counter(my-counter) ". ";  font-weight: bold; color: blue; }
+
+        body{counter-reset: count-h2; }
+        body h2{counter-increment: count-h2; margin-inline: 30px; width: calc(100% - (30px * 2)); background-color: #000; color: #fff;}
+        body h2::before{content: counter(count-h2)". "}
+        
+        ul{width: min(40vw, 270px);}
+
+    </style>
+</head>
+<body>
+    <div style="background: #f0f0f0;">
+        <h2>Unordered List</h2>
+        <ul>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, hic.</li>
+            <li>Error dignissimos facere ducimus, fugiat dolorum culpa voluptatibus temporibus provident!</li>
+            <li>Fugiat autem at facere expedita. Quo dignissimos nihil ab iusto!</li>
+            <li>Quo in quae nihil tempora delectus cumque saepe earum consectetur.</li>
+            <li>Amet quos non voluptatem et at sed quibusdam ut aperiam?</li>
+            <li>Accusamus ad facilis possimus sequi quisquam ducimus fugit accusantium numquam?</li>
+        </ul>
+        <h2>Ordered List</h2>
+        <ol>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, eos?</li>
+            <li>Velit consequuntur voluptatem numquam consectetur labore. Mollitia ipsa assumenda hic.</li>
+            <li>Pariatur, natus. Distinctio culpa aliquam iusto veniam corrupti dolore voluptates?</li>
+            <li>Numquam deserunt expedita quia maxime, autem nihil unde illo cum.</li>
+        </ol>
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, dolore.</li>
+            <li>Temporibus ducimus explicabo rem nesciunt dolores nam ipsum fugiat quae.</li>
+            <li>Illo asperiores iusto optio! Nulla maxime recusandae exercitationem quibusdam debitis!</li>
+            <li>A earum, voluptates doloribus cupiditate repellendus veritatis odio atque dignissimos!</li>
+            <li>Vitae consequuntur eos commodi at illum officia velit ducimus. Eum.</li>
+            <li>Aspernatur itaque ex aliquam minima maxime quas possimus doloremque nobis.
+                <ul>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Voluptatum perferendis vitae id.</li>
+                    <li>Expedita non soluta exercitationem.</li>
+                    <li>Distinctio possimus ullam dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga facere provident natus fugiat sequi quibusdam placeat in corrupti. Laudantium placeat iure aliquam itaque consequatur fugit quibusdam rerum illo doloribus neque.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
