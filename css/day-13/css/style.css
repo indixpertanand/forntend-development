@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 200px;
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    border: 1px solid black;
+    padding: 1rem;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label:not(:has([type="radio"], [type="checkbox"])) {
+    display: block;
+    font-size: .8em;
+    margin-bottom: 5px;
+}
+
+input:not([type="radio"], [type="checkbox"], [type="submit"]),
+select,
+textarea {
+    width: 100%;
+    padding: .5em 1em;
+    font-size: 1rem;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+}
+
+input:not([type="submit"]):focus,
+select:focus,
+textarea:focus {
+    outline-color: green;
+}
+
+select {
+    appearance: none;
+    background-image: url('./../images/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
