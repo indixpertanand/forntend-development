@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float Example</title>
+    <style>
+        section div{
+            float: right
+        }
+         .float-container::after{
+            content: '';
+            display: block;
+            clear: both;
+         }
+       .float-container img{
+        float: inherit;
+        margin-right: 10px;
+        margin-bottom: 10px;
+       }
+       .clearfix{
+        clear: both;
+        display: block;
+       }
+       p{margin: 0;}
+    </style>
+</head>
+<body>
+    <section>
+
+        <div class="float-container">
+            <img src="./images/3.avif" alt="Example Image" width="150">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A enim exercitationem dignissimos et! Non dignissimos nobis voluptate voluptatem. Ab ut est facere velit iste aperiam esse reiciendis odit, perferendis molestiae? Reprehenderit tenetur quos dolores consectetur.</p>   
+            <p>lorem</p>     
+            <p class="clearfix">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ut aut ad saepe repellat velit error impedit deleniti, reprehenderit numquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ut aut ad saepe repellat velit error impedit deleniti, reprehenderit numquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ut aut ad saepe repellat velit error impedit deleniti, reprehenderit numquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ut aut ad saepe repellat velit error impedit deleniti, reprehenderit numquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ut aut ad saepe repellat velit error impedit deleniti, reprehenderit numquam!</p>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit dignissimos minus reiciendis veritatis ad, in suscipit non placeat quis ut dolores harum, beatae maxime porro rerum molestiae! Ut, doloribus accusamus. Doloribus quibusdam cumque eius soluta atque dicta eos, eligendi accusantium, debitis repudiandae eaque magni corrupti nostrum quisquam. Omnis laborum sunt dolorum adipisci minus dolorem numquam, est quam corrupti ut iusto, impedit provident sed culpa dolor ipsam vero, recusandae corporis totam consequuntur doloribus nemo nihil voluptate ea. A placeat nostrum velit accusantium. Totam eligendi illum eum explicabo cum vel quos? Quia, doloribus deserunt. Alias repellendus repellat recusandae eligendi eveniet dicta?</p>
+    </div>
+</body>
+</html>
