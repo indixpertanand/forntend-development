@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        /* .banner{
+            background: red;
+            width: 100%;
+            aspect-ratio: 7/3;
+        } */
+        .container{
+        max-width: 93vw;
+        margin-inline: auto;
+        }
+        
+        .banner .container{
+        display: flex;
+        gap: 60px;
+        }
+        .left-panel, .right-panel, .third-panel{
+        width: 40%;
+        flex-grow: 1;
+        min-height: 10rem;
+        border: 1px solid red;
+
+        }
+        @media (max-width: 1900px){           
+               
+            .banner .container{gap: 40px} 
+        }
+
+        @media (max-width: 1400px){ 
+            .banner .container{gap: 30px} 
+        }
+        @media (max-width: 768px){ 
+            .banner .container{flex-direction: column-reverse;}             
+            .left-panel, .right-panel, .third-panel{width: 100%;}
+        }
+
+    </style>
+</head>
+<body>
+    <section class="banner">
+        <div class="container">
+            <div class="left-panel">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore ut, at eveniet exercitationem cumque? Eveniet quia magnam at necessitatibus.</p>
+            </div>
+            <div class="right-panel">
+                image
+            </div>
+        </div>
+    </section>
+</body>
+</html>
