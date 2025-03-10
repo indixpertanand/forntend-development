@@ -1,0 +1,38 @@
+a{
+    color: black;
+    transition: all .4s ease-in;            
+}
+a:hover{
+    color: red;
+}
+.my-class a{
+    transition-duration: 1s;
+}
+button{
+    display: inline-block;
+    margin-top: 2rem;
+    /* filter: invert(1); */
+    border-color: aqua;
+}
+div{
+    height: 60px;
+    filter: drop-shadow(2px -3px 5px  red);
+}
+button:hover{
+    animation: move-right 1s ease-in-out infinite alternate; 
+    /* animation-fill-mode: both; */
+    /* animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); */
+}
+@keyframes move-right {
+    0%{
+        translate: 0;
+    }
+    50%{
+        translate: 100%;
+        color: red;
+    }
+    100%{
+        translate: 0% 0px;
+        color: black;
+    }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --accent: blue;
+            --secondary: red;            
+            --columns: 2;
+            /* --gap: 1rem; */
+        }
+
+        span {
+            color: var(--accent);
+        }
+
+        strong {
+            color: var(--accent);
+        }
+
+        em {
+            color: var(--accent);
+        }
+        .local {
+            --primary: yellow;
+            --accent: green;
+        }
+        .local p{
+            color: var(--secondary, #fff);
+            background-color: var(--accent);
+        }
+        .local span {
+            background-color: var(--primary);
+        }
+
+        div span {
+            background: var(--primary); /* wont work as --primary is only defined for .local */
+        }
+
+        .d-grid {
+            display: grid;            
+            --columns: 6;
+            grid-template-columns: repeat(var(--columns), 1fr);
+            gap: var(--gap, 1rem);
+        }
+        .d-grid.grid2{
+            --columns: 3;
+            /* --gap: 5rem */
+        }
+        .d-grid div{border: 1px solid #000;}
+        @media (max-width: 768px) {
+            .d-grid {
+                --columns: 3;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .d-grid {
+                --columns: 2;
+            }
+        }
+        .local span{
+            display: inline-block;
+            transform: translate(0, 12px);
+        }
+        .circle{
+            height: 30px;
+            width: 60px;
+            border: 2px solid red;
+            /* border-top-color: transparent; */
+            margin-top: 20px;
+            margin-inline: auto;
+            border-radius: 50%;
+            transition: .4s all;
+        }
+        .circle:hover{
+            /* transform: scale(.8, 1); */
+            /* border-color: green; */
+            transform-origin: top left;
+            transform:rotate(90deg);
+        }
+        .btn-group{
+            position: fixed;
+            right: 0;
+            top: 50%; 
+            transform: rotate(90deg) translate(50%);
+            transform-origin: top right;
+
+        }
+        button{
+            padding: .5em 1em;
+            background-color: crimson;
+            color: white;
+            border-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="local">
+        Lorem ipsum dolor <span> sit amet.</span>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, adipisci.</p>
+        </div>
+    </section>
+    <div>Lorem ipsum dolor <span> sit amet.</span>
+
+    </div>
+    <div>Lorem ipsum dolor <strong> sit amet.</strong></div>
+    <div>Lorem ipsum dolor <em> sit amet.</em></div>
+    <div class="d-grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="d-grid grid2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="circle">
+    </div>
+    <div class="btn-group">
+        <button>Button link 1</button>
+        <button>Button link 2</button>
+    </div>
+</body>
+
+</html>
