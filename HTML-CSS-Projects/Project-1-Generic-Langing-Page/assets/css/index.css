@@ -1,0 +1,28 @@
+/* Header Start */
+header{
+    padding-block: 2.25rem;
+    background-color: #fff;
+}
+header ul{column-gap: var(--gap);}
+header .nav-item{
+margin-bottom: 0; 
+}
+header .nav-item:last-child{
+    padding-left: calc(var(--gap) * .5);
+}
+/* Header Start End*/
+
+
+/* Footer Top */
+
+.more-info{
+    padding: 1.7rem 3rem;
+    border-radius: .62rem;
+    translate: 0 4rem;
+}
+.more-info h2{margin-bottom: .62rem;}
+
+/* Footer-bottom */
+.footer-bottom{
+    padding-block: 7rem 4.5rem
+}
