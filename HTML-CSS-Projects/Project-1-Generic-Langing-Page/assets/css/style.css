@@ -29,12 +29,18 @@ body{
     font-family: var(--family-primary);
 }
 
+@media (max-width: 767px){
+    html, body{
+        font-size: 12px;
+    }
+}
 /* Typography Start */
 
 
 
 h1, h2, h3, h4, h5, h6{
     font-family: var(--family-secondary);
+    color: var(--color-text-dark);
 }
 
 h1, h2, h3{
@@ -58,7 +64,7 @@ h4, h5, h6, p, li{
     font-family: var(--family-secondary);
 }
 
-.text-50{font-size: 3.2rem;}
+.text-50{font-size: 3.2rem; line-height: 1.4;}
 .text-30{font-size: 1.87rem;}
 .text-24{font-size: 1.5rem;}
 .text-22{font-size: 1.37rem;}
@@ -96,7 +102,27 @@ h4, h5, h6, p, li{
     max-width: 1160px;
     margin-inline: auto;
 }
-
+@media (max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (max-width: 991px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (max-width: 767px){
+    .container{
+        max-width: 550px;
+    }
+}
+@media (max-width: 575px){
+    .container{
+        max-width: 100%;
+        padding-inline: 1rem;
+    }
+}
 /* Buttons & links */
 
 a{
@@ -135,6 +161,25 @@ a{
 .mb-0{
     margin-block: auto;
 }
+
+.text-center{
+    text-align: center;
+}
+
+.custom-check li{position: relative; padding-left: 2rem;}
+.custom-check li::before{
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    aspect-ratio: 1/1;
+    background-image: url('./../images/icons/tick-circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: .3rem;
+}
+
 
 /* Utility Classes End */
 
