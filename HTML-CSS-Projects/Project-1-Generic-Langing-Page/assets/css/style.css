@@ -93,6 +93,11 @@ h4, h5, h6, p, li{
     color: #fff;
 }
 
+.text-dark{
+    color: var(--color-text-dark);
+}
+
+
 /* Backgrounds start */
 
 
@@ -189,3 +194,18 @@ img{
     height: auto;
 }
 
+.rounded-full{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.arrow-icon{
+    width: 2.23rem;
+    background: var(--color-gray-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow-icon::before{
+    content: url('../images/icons/arrow.png');
+}
