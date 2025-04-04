@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+       .row:not(.gutter) [class^="col"]{
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+        .flex-height {
+            background: #f0f0f0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+         <div class="row">
+            <div class="col-6 col-lg-4">Image</div>
+            <div class="col-6 col-lg-4 order-lg-3">Image</div>
+            <div class="col-lg-4">text</div>
+         </div>
+         <br/>
+         <!-- Gutters  -->
+         <div class="row g-5">
+            <div class="col-6 col-lg-4">
+                <div class="border p-3 h-100">
+                    col 1
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="border p-3 h-100">
+                    col 2
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="border p-3 h-100">
+                    col 2
+                </div>
+            </div>
+         </div>
+         <br/>
+         <!-- Utility - Display  -->
+          <div class="d-flex d-md-block justify-content-between">
+            <div class="d-inline">1</div>
+            <div class="d-inline">2</div>
+            <div class="d-none d-md-inline">3</div>
+            <div class="d-inline">4</div>
+          </div>
+          <br/>
+          <!-- Utility - Flex -->
+        <h2>Utilities - Flex</h2>
+        <div class="flex-height d-flex flex-column flex-md-row align-items-center">
+            <div>1
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione maiores doloremque est quod, ullam officia reprehenderit accusantium, dolore eius aut velit eaque sunt at quam temporibus repudiandae ipsa aliquid.
+            </div>
+            <div>2 Lorem</div>
+            <div class="align-self-start">3 Lorem </div>
+            <div class="align-self-end">4 lorem</div>
+        </div>
+        <br/>
+        <!-- flex -fill -->
+        <div class="d-flex">
+            <div class="flex-fill">1 </div>
+            <div class="flex-fill">2</div>
+            <div class="flex-fill">3</div>
+            <div class="flex-fill">4</div>
+        </div>
+        <!-- flex -fill -->
+        <div class="d-flex">
+            <div class="flex-shrink-0">
+                <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"  width="300px" class="img-fluid h-100" alt="">
+            </div>
+            <div class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. In nulla dolore unde! Deleniti tempore ullam optio sed inventore similique in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, perferendis fugiat modi non exercitationem iste iusto doloribus nulla ad, aperiam officia pariatur suscipit molestias consequuntur facere dolor, ex minus accusantium.</div>
+        </div>
+        <!-- Visibility -->
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

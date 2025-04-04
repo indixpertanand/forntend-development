@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+       .row:not(.gutter) [class^="col"]{
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+        /* .gutter{
+            --bs-gutter-x: 0
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>Bootstrap Layout</h1>
+    <!-- Containers -->
+    <div class="container">Container 100% till 575px</div>
+    <div class="container-sm">container-sm 100% wide until small breakpoint</div>
+    <div class="container-md">container-md 100% wide until medium breakpoint</div>
+    <div class="container-lg">container-lg 100% wide until large breakpoint</div>
+    <div class="container-xl">container-xl 100% wide until extra large breakpoint</div>
+    <div class="container-xxl">container-xxl 100% wide until extra extra large breakpoint</div>
+    <br/>
+    <!-- Bootstrap Grid -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                Column
+            </div>
+            <div class="col">
+                Column
+            </div>
+            <div class="col">
+                Column
+            </div>
+        </div>
+
+        <br/>
+        <div class="row">
+            <div class="col-4">
+                Column 1
+            </div>
+            <div class="col-4">
+                Column 2
+            </div>
+            <div class="col-4">
+                Column 3
+            </div>
+        </div>
+        <br/>
+        <!-- Grid Breakpoints -->
+        <div class="row">
+            <div class="col-lg-6">column 1</div>
+            <div class="col">column 2</div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-lg-4">column 1</div>
+            <div class="col-lg-8">column 2</div>
+        </div>
+        <div class="row gutter gx-0">
+            <div class="col-lg-4"><div class="card">column 1</div></div>
+            <div class="col-lg-8"><div class="card">column 2</div></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">1</div>
+            <div class="col-sm-6 col-lg-4">2</div>
+            <div class="col-sm-6 col-lg-4">3</div>
+            <div class="col-sm-6 col-lg-4">4</div>
+            <div class="col-sm-6 col-lg-4">5</div>
+            <div class="col-sm-6 col-lg-4">6</div>
+        </div>
+        <br/>
+        <!-- Align Elements -->
+        <div class="row align-items-start">
+            <div class="col">
+            One of three columns Lorem ipsum dolor sit amet.
+            </div>
+            <div class="col">
+            One of three columns
+            </div>
+            <div class="col">
+            One of three columns
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, ut.
+            </div>
+        </div>
+        <div class="div border border-1">        
+            <div class="row align-items-center">
+                <div class="col">
+                One of three columns Lorem ipsum dolor sit amet.
+                </div>
+                <div class="col">
+                One of three columns
+                </div>
+                <div class="col">
+                One of three columns
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, ut.
+                </div>
+            </div>
+        </div>
+        <div class="div border border-1">        
+            <div class="row align-items-end">
+                <div class="col">
+                One of three columns Lorem ipsum dolor sit amet.
+                </div>
+                <div class="col">
+                One of three columns
+                </div>
+                <div class="col">
+                One of three columns
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, ut.
+                </div>
+            </div>
+        </div>
+        <br/>
+        <!-- Wrapping -->
+        <div class="row">
+            <div class="col-9">.col-9</div>
+            <div class="col-4">.col-4</div>
+            <div class="col-4">.col-4</div>
+        </div>
+        <div class="row">
+            <div class="col-4">.col-4</div>
+            <div class="col-4">.col-4</div>
+            <div class="col-6">.col-6</div>
+        </div>
+        <br/>
+        <!-- Column Breaking -->
+        <div class="row">
+            <div class="col-3">.col-3</div>
+            <div class="col-3">.col-3</div>
+            <div class="w-100"></div>
+            <div class="col-3">.col-3</div>
+            <div class="col-3">.col-3</div>
+        </div>
+        <br/>
+        <!-- Without column break -->
+         <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 offset-lg-3">col-6</div>
+                    <div class="col-6">col-6</div>
+                    <div class="col-6">col-6</div>
+                    <div class="col-6">col-6</div>
+                </div>
+            </div>
+         </div>
+         <br/>
+        <!-- Reordering -->
+         <div class="row">
+            <div class="col-6 col-lg-4">Image</div>
+            <div class="col-6 col-lg-4 order-lg-3">Image</div>
+            <div class="col-lg-4">text</div>
+         </div>
+         <br/>
+         <!--  -->
+         <div class="col-9 border">.Col-9</div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
