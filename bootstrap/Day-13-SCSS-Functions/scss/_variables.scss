@@ -1,0 +1,26 @@
+$primary: #1919bc; 
+//dark blue
+$accent: #f66308; //orange
+$info: #477ff8;
+$danger: #a90404;
+$body-color: #333;
+$body-bg: #f5f6fa;
+$bodybgalt: #202435;
+
+$base-family: “Montserrat”, sans-serif; //default font-family
+$heading-family: “Inter”, sans-serif; // Headings font-family
+
+$theme_colors:(
+    "primary": $primary,
+    "info": $info,
+    "danger": $danger,
+);
+
+$custom_theme_colors:(
+    "accent": $accent,
+    "bodyBgAlt": $bodybgalt,
+);
+
+$theme_colors: map-merge( $theme_colors, $custom_theme_colors);
+
+

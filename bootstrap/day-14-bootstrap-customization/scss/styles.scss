@@ -1,0 +1,64 @@
+
+
+$blue: #08429a;
+// $accent: #000;
+
+$accent: #dd930b !default;
+$bodyAlt: #cbc1c1;
+
+$custom_colors: (
+    "accent": $accent,
+    "body-alt": $bodyAlt
+);
+
+$primary: #04168c;
+
+$gradient: linear-gradient(to right, red, green);
+
+$spacer: 2rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+);
+
+
+$h7-font-size:                1rem;
+$h1-font-size:                3rem;
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+// $h1-font-size:                $font-size-base * 3;
+$h2-font-size:                $font-size-base * 2.5;
+$h3-font-size:                $font-size-base * 2;
+$h4-font-size:                $font-size-base * 1.75;
+$h5-font-size:                $font-size-base * 1.5;
+$h6-font-size:                $font-size-base * 1.25;
+
+
+$custom-font-size: (
+  "7": $h7-font-size,
+);
+
+$font-sizes: map-merge($map1: $font-sizes, $map2: $custom-font-size);
+
+$colors : map-merge($colors, $custom_colors);
+
+$theme-colors: map-merge($map1: $theme-colors, $map2: $custom_colors);
+
+
+
+
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+// .text-accent{
+//     color: $accent;
+// }
