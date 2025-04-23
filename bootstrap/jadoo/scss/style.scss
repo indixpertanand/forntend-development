@@ -1,0 +1,81 @@
+$primary: #F1A501;
+$accent: #DF6951;
+
+$custom_theme_colors: (
+   "accent": $accent, 
+);
+
+
+$custom-container-max-widths: (
+  xl: 1160px,
+  xxl: 1350px,
+);
+
+$body-color: #5E6282;
+
+
+
+$font-family-base: "Poppins", sans-serif;
+$headings-font-family: "Volkhov", serif;
+$headings-color: #181E4B;
+
+$nav-link-font-weight: 500;
+
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+
+
+
+$container-max-widths: map-merge($map1: $container-max-widths, $map2: $custom-container-max-widths);
+
+$theme_colors: map-merge($map1: $theme_colors, $map2: $custom_theme_colors);
+
+
+
+$h1-font-size:                $font-size-base * 5.25;
+$h2-font-size:                $font-size-base * 3.12;
+$h3-font-size:                $font-size-base * 2;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base * 1.125;
+$h6-font-size:                $font-size-base;
+$h7-font-size:                $font-size-base * .875;
+
+$cuctom_font-size: (
+    7: $h7-font-size
+);
+$font-sizes: map-merge($map1: $font-sizes, $map2: $cuctom_font-size);
+// Buttons
+
+$btn-border-radius: .625em;
+$btn-padding-y: 1em;
+$btn-padding-x: 1.5em;
+
+
+$nav-link-font-size: $h5-font-size;
+
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './header';
+
+body::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    translate: -90% -5%;
+    width: 32.63%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #D5AEE4;
+    filter: blur(150px);
+}
+
+
+// main::before{
+//     content: '';
+//     position: absolute;
+// }
