@@ -1,0 +1,43 @@
+.category{
+    h3{
+        font-family: $font-family-base;
+    }
+    .img-wrapper{
+        height: 154px;
+    }
+    .bg-white{    
+        &:hover{
+            
+        }
+        &:hover::before{
+            opacity: 1;
+        }
+    }
+    .category-item{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 35%;
+            aspect-ratio: 1/1;
+            border-radius: 30% 0 10% 0;
+            background-color: $accent;
+            bottom: 0;
+            left: 0;
+            translate: -30% 30%;
+            opacity: 0;
+            z-index: -1;
+            transition: .4s all
+        }
+        &:hover{
+            z-index: 3;
+        }
+        &:hover .bg-white{
+            box-shadow: $box-shadow-lg;
+            z-index: 1;
+        }
+        &:hover::before{
+            opacity: 1
+        }
+    }
+}

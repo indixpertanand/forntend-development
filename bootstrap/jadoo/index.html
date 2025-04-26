@@ -17,16 +17,18 @@
 
 <body>
 
-    <header>
+    <header class="fixed-top">
         <nav class="navbar navbar-expand-lg">
             <div class="container ">
-                <a class="navbar-brand" href="#" aria-label="Go to home page"><img src="./images/jadoo-logo.svg" alt="Jadoo Logo"></a>
+                <a class="navbar-brand" href="#" aria-label="Go to home page"><img src="./images/jadoo-logo.svg"
+                        alt="Jadoo Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll align-items-lg-center" style="--bs-scroll-height: 100px;">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll align-items-lg-center"
+                        style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Desitnations</a>
                         </li>
@@ -47,7 +49,7 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <select class="form-select border-0"  name="language" id="lang">
+                        <select class="form-select border-0" name="language" id="lang">
                             <option value="en" selected>en</option>
                             <option value="hi">hi</option>
                         </select>
@@ -57,7 +59,104 @@
         </nav>
     </header>
     <main>
-        <img src="./images/right-wave-vector.svg" alt="decoration vector" class="img-fluid position-absolute top-0 end-0 z-n1" />
+        <img src="./images/right-wave-vector.svg" alt="decoration vector"
+            class="img-fluid position-absolute top-0 end-0 z-n1" />
+        <section class="hero-banner pt-120 overflow-x-hidden">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <figure class="position-relative">
+                            <img src="./images/a-girl-with-backpack-seating-on-suitcase.png" class="img-fluid"
+                                alt="a girl with backpack seating on suitcase">
+                            <img src="./images/plane-icon.png" class="img-fluid plane-icon-1 position-absolute start-0"
+                                alt="plain icon">
+                            <img src="./images/plane-icon.png" class="img-fluid plane-icon-2 position-absolute end-0"
+                                alt="plain icon">
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-accent fw-bold">Best Destinations around the world</p>
+                        <h1 class="fw-bold mb-6">Travel, <span class="position-relative">enjoy <img
+                                    class="position-absolute bottom-0 start-0 z-n1" src="./images/text-decore.svg"
+                                    alt="text decoration"></span>
+                            and live a new
+                            and full life</h1>
+                        <p class="fw-medium mb-7">Built Wicket longer admire do barton vanity itself do in it. Preferred
+                            to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
+                        <div class="d-flex align-items-center gap-4 flex-wrap">
+                            <a href="#" class="btn btn-primary btn-lg">Find out more</a>
+                            <button class="btn text-nowrap btn-link btn-lg d-flex align-items-center gap-4"><span
+                                    class="d-block ratio ratio-1x1 shadow-accent rounded-circle p-3 bg-accent"><img
+                                        src="./images/play-icon.svg" class="img-fluid" alt="play-icon"></span> Play
+                                Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="category pt-60 pt-lg-100">
+            <div class="container ">
+                <div class="heading-wrapper text-center mb-50 mb-lg-70">
+                    <p class="fs-5 fw-semibold">CATEGORY</p>
+                    <h2>We Offer Best Services</h2>
+                </div>
+                <div class="row gy-8">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="category-item h-100">
+                            <div class="bg-white h-100 rounded-5 text-center p-5 p-lg-6 px-xxl-8">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img src="./images/whether-icon.svg" class="img-fluid" alt="Whether Icon">
+                                </div>
+                                <div class="content">
+                                    <h3 class="fs-4 fw-semibold text-dark">Calculated Weather</h3>
+                                    <p>Built Wicket longer admire do barton vanity itself do in it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="category-item h-100">
+                            <div class="bg-white h-100 rounded-5  text-center p-5 p-lg-6 px-xxl-8">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img src="./images/flights-icon.svg" class="img-fluid" alt="flight Icon">
+                                </div>
+                                <div class="content">
+                                    <h3 class="fs-4 fw-semibold text-dark">Best Flights</h3>
+                                    <p>Engrossed listening. Park gate sell they west hard for the.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="category-item h-100">
+                            <div class="bg-white h-100 rounded-5 text-center p-5 p-lg-6 px-xxl-8">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img src="./images/events-icon.svg" class="img-fluid" alt="Microphone Icon">
+                                </div>
+                                <div class="content">
+                                    <h3 class="fs-4 fw-semibold text-dark">Local Events</h3>
+                                    <p>Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+
+                        <div class="category-item h-100">
+                            <div class="bg-white h-100 rounded-5 text-center p-5 p-lg-6 px-xxl-8">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img src="./images/customization-icon.svg" class="img-fluid" alt="gears Icon">
+                                </div>
+                                <div class="content">
+                                    <h3 class="fs-4 fw-semibold text-dark">Customization</h3>
+                                    <p>We deliver outsourced aviation services for military customers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"

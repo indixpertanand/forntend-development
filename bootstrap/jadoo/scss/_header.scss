@@ -1,9 +1,17 @@
-header .nav-item {padding: 0 2rem;
-     .nav-link{padding: 0 1.5rem;}
+header .nav-item {padding: 0 .5rem;
+    .nav-link{
+        padding: 0 1.5rem; color: $nav-link-color;
+        &:hover{
+            color: $accent;
+        }
+    }
 }
 
 header{padding-block: 2rem;}
 
 @media (min-width: 1200px){
-    header{padding-block: 3rem;}  
+    header .nav-item {padding: 0 1rem;} 
+}
+@media (min-width: 1400px){
+    header .nav-item {padding: 0 2rem;}
 }
