@@ -108,6 +108,7 @@ $nav-link-font-size: $h5-font-size;
 @import './header';
 @import './banner';
 @import './category';
+@import './topselling';
 
 body::before{
     content: '';
