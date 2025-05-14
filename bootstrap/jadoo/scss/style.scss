@@ -18,6 +18,8 @@ $nav-link-color: #212832;
 $nav-link-hover-color: $accent;
 $link-decoration: none;
 
+$navbar-light-color: $nav-link-color;
+$navbar-light-hover-color: $accent;
 
 $font-family-base: "Poppins", sans-serif;
 $headings-font-family: "Volkhov", serif;
@@ -143,4 +145,21 @@ h1{
 }
 .btn-primary{
   color: #fff;
+}
+
+.projects .swiper{
+  height: 80vh;
+}
+.projects .swiper-slide{
+  height: calc((100% - 30px) / 2) !important
+}
+.projects .swiper-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .swiper-controls > *{
+  position: relative;
+  margin: 0;
+  bottom: 0;
 }
