@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes & Operators</title>
+</head>
+<body>
+    <h1>Datatypes & Operators</h1>
+
+    <script>
+        // Premitive Datatypes
+        let a = "Anand Singh"; //String
+        let b = 10; //Number
+        let c = false; //Boolean
+        let d; //undefined
+        let e = null; //null 
+        let number = 9999999999999999999n;
+        console.log(number);
+        console.log(typeof(a), typeof(b), typeof(c), typeof(d), typeof(e), typeof(number));
+   
+        // Non-Premitive Datatypes
+        let array =  ["Anand", 20, false, null];
+        let obj = {
+            firstName: "Anand",
+            lastName: "Singh",
+            address: "Kushinagar",
+            contact: "907676645323",  
+            fullName: function(){
+                return this.firstName + " " + this.lastName
+            }
+        };
+        function func(){
+            console.log("Hello from function");
+        }
+        func();
+        console.log(array[0], obj.contact, obj.fullName(), typeof(obj), typeof(func));
+
+        // Oerators
+        let val1 = 10;
+        let val2 = 2;
+        let val3 = "3";
+        // Arithmatic Operators
+        let sum = val1 + val2;
+        console.log(sum)
+        sum = sum + val3 // String concatination
+        console.log(sum)
+
+        let sub = val1 - val2;
+        console.log(sub); // 8
+        sub = val1 - val3;
+        console.log(sub); // 7
+
+        let multi = val1 * val2;
+        console.log(multi);
+        multi = val1 * val3;
+        console.log(multi);
+
+        let div = val1 / val2;
+        console.log(div);
+        div =val3 / val1 ;
+        console.log(div);
+
+        let rem = val1 % val2; // modulas operator - reminder
+        console.log(rem);
+        rem = val1 % val3;
+        console.log(rem);
+
+        console.log(++val2); // 3
+        console.log(val2); // 3
+        console.log(val1++); // 10
+        console.log(val1); // 11, 10
+
+        console.log(val1 ** val2);
+
+        // Assignment Operator
+        val1+=val2; // val1 = val1 + val2;
+        console.log(val1); // 14
+        val1-=val2;
+        console.log(val1); // 11
+        val1*=val2;
+        console.log(val1); // 33
+        val1/=val2;
+        console.log(val1); // 33
+
+        // val1= 10;
+        val1%2 == 0 ? console.log('even') : console.log('odd');
+    </script>
+</body>
+</html>

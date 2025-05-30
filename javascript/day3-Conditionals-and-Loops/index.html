@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Conditionals & Loops</title>
+</head>
+<body>
+    
+    <script>
+        //write a programme to find whether one is eligible to vote or not. 
+        
+        //  let age = prompt("Enter your age");
+        // console.log(age);
+        // if(age >= 18){
+        //     console.log("Eligible to vote");
+        // }else{
+        //     console.log("Not eligible to vote");
+        // }
+        // (age >= 18) ? console.log("Eligible to vote") : console.log("Not eligible to vote");
+
+
+        // Write a programme to find if one is eligible to marriage
+    
+        // let age = prompt("Enter your age");
+        // let gender = prompt("Enter your gender: male/female");
+
+        // if(gender=='male' && age >= 21){
+        //     console.log("You are eligible for marriage")
+        // }else if(gender=='female' && age >= 18){
+        //    console.log("You are eligible for marriage")
+        // }else{
+        //    console.log("You are not eligible for marriage") 
+        // }
+
+        // let day = prompt("Enter day in 1 - 7 where 1 is sunday and 7 is saturday");
+        // console.log(parseInt(day))
+        // if (!(parseInt(day) && day <= 7 && day > 0)){
+        //     console.log('You have entered wrong day')
+        // }else{
+        //     // console.log(day)
+        //     switch (parseInt(day)){
+        //         case '1':
+        //             console.log('Sunday');
+        //             break;
+        //         case '2':
+        //             console.log('Monday');
+        //             break;
+        //         case '3': 
+        //             console.log('Tuesday');
+        //             break;
+        //         case '4': 
+        //             console.log('Wednesday');
+        //             break;
+        //         case '5': 
+        //             console.log('Thursday');
+        //             break;
+        //         case '6': 
+        //             console.log('Friday');
+        //             break;
+        //         case '7': 
+        //             console.log('Saturday');
+        //             break;
+        //         default:                    
+        //             console.log('please enter between 1-7');                
+        //     }
+        // }
+
+
+        // Loops
+
+        // for(let i=0; i<=5; i++){
+        //     console.log(i*4);
+        // }
+
+        let i=6;
+        // while(i<=5){
+        //    console.log(i*5);
+        //    i++; 
+        // }
+
+        do{
+            console.log(i*6);
+            i++;
+        }while(i<=5);
+
+        let fruits = ["apple", "banana", "cherry"];
+        // for(let i=0; i < fruits.length; i++ ){
+        //     console.log(fruits[i]);
+        // }
+        for(fruit of fruits){
+            console.log(fruit);
+        }
+
+        fruits.forEach(function(abc, a){
+            console.log(abc, a)
+        })
+    </script>
+</body>
+</html>
