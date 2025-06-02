@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions & Strings</title>
+</head>
+<body>
+    
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus harum aliquam sunt voluptate aperiam facilis deleniti commodi doloremque architecto!
+    <script>
+        //Functions
+        //Function Declaration
+        // const obj = {
+        //     name: "Anand",
+        //     printHello: ()=>{
+        //         console.log('Hello World arrow function');
+        //         console.log(this.name);
+        //         // return 'Anand';
+        //     },
+        //     printHello1: function(){
+        //         console.log('Hello World general function');
+        //         console.log(this.name);
+        //         return this.name;
+        //     }
+
+        // }
+        // let name = obj.printHello();
+        // let name1 = obj.printHello1();
+        // console.log(name, name1)
+        // function printHello(){
+        //     console.log("Hello World!");
+        //     console.log(this)
+        // }
+        // printHello();
+
+        //Function Expression
+        // const printHello = function(){
+        //     console.log("Hello World!")
+        // }
+        // printHello();
+
+        // Arrow Function
+
+        const printHello2 = name => {
+            console.log("Hello World!");
+            // return 'Anand';
+        }
+        
+        let name = printHello2();
+        console.log(name);
+
+        // String
+        let single = 'Anand';
+        let str = new String('String');
+        let double = "Singh";
+        let fullname = single + ' ' + double;
+        let fullname1 = `${single} ${double}`;
+        console.log(fullname, fullname1)
+        console.log(single.length, str.length);
+        console.log(single.concat('Singh'));
+
+        // Change Case
+        console.log(fullname.toUpperCase());
+        console.log(fullname.toLowerCase());
+        console.log(fullname.charAt(7))
+        console.log(fullname.includes('ad'))
+        console.log(fullname.slice(3, 8))
+
+        console.log('Hello World!'.replace('World', 'Javascript') )
+        console.log('    Anand     Singh '.trim());
+        let strings = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus harum aliquam sunt voluptate aperiam facilis deleniti commodi doloremque architecto!'
+        let stringArr = strings.split('.');
+        console.log(stringArr)
+
+        let strs = "apple,banana,cherry";
+        console.log(strs.split(',').join('-'))
+        
+        //console.log(strs.join)
+    </script>
+</body>
+</html>
