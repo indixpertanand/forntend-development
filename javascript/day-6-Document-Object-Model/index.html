@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM</title>
+    <style>
+        .active{
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2 id="heading">heading level 2</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2>heading level 2</h2>
+    <p class="para"> 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2>heading level 2</h2>
+    <p id="para" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2>heading level 2</h2>
+    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    
+    <script>
+        console.log(document)
+        //by id
+        let heading = document.getElementById("heading");
+        // console.log(heading)
+        //by class name
+        let para = document.getElementsByClassName("para");
+        //By tag name
+        let secondHeadings = document.getElementsByTagName("h2");
+        for(let i= 0; i< secondHeadings.length; i++){
+            console.log(secondHeadings[i])
+        }
+
+        // querySelector - returns single elements with specified selector
+        let singlePara = document.querySelector(".para");
+        console.log(singlePara);
+
+         // querySelectorAll - returns all elements with specified selector
+        let allPara = document.querySelectorAll(".para");
+        console.log(allPara);
+
+        let getheading = document.querySelectorAll('[id]')
+        console.log(getheading)
+
+
+        // Updating content
+        document.getElementsByTagName('h1')[0].innerText = "New Heading";
+        heading.innerHTML = "heading <span>level 2</span>";
+
+        allPara.forEach((el, index)=>{
+            console.log(el.setAttribute("data-id", index))
+        });
+
+        heading.querySelector('span').style.transform = "#f00"
+
+        document.getElementsByTagName('h1')[0].addEventListener('click',function(){
+           document.getElementsByTagName('h1')[0].classList.toggle('active')
+        })
+
+        document.querySelector("[data-id='0']").classList.remove('para')
+
+
+        //Creating and adding Elements
+
+        let heading2 = document.createElement('h2');
+        heading2.textContent = "Dynamic Heading";
+        heading2.classList.add("highlight");
+        document.body.appendChild(heading2);
+        document.body.insertBefore(heading2, document.querySelector("[data-id='0']"));
+
+        // heading2.remove();
+
+        let deletedEl = document.querySelector('.highlight');
+        deletedEl.remove();
+        console.log(deletedEl);
+
+        let newEl = document.createElement('h2');
+        newEl.textContent= 'Replaced Heading Level 2';
+        document.getElementById('heading').replaceWith(newEl)
+    </script>
+</body>
+</html>

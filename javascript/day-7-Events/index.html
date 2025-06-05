@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+</head>
+<body>
+    <section onclick="console.log('from section')">
+    <h1>Heading</h1>
+    </section>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2 id="heading">heading level 2</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2>heading level 2</h2>
+    <p class="para"> 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2>heading level 2</h2>
+    <p id="para" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    <h2>heading level 2</h2>
+    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum minima repellendus incidunt exercitationem odit qui similique modi, omnis odio.</p>
+    
+    <form action="" >
+        <input type="text" name="name" value="Anand">
+        <input type="number" name="contact" >
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="product-wrapper">
+        <div class="product"><button class="buy-now" data-product-id="1">Buy Now</button><button class="addto-cart" data-product-id="1">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="2">Buy Now</button><button class="addto-cart" data-product-id="2">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="3">Buy Now</button><button class="addto-cart" data-product-id="3">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="4">Buy Now</button><button class="addto-cart" data-product-id="4">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="5">Buy Now</button><button class="addto-cart" data-product-id="5">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="6">Buy Now</button><button class="addto-cart" data-product-id="6">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="7">Buy Now</button><button class="addto-cart" data-product-id="7">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="8">Buy Now</button><button class="addto-cart" data-product-id="8">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="9">Buy Now</button><button class="addto-cart" data-product-id="9">Add to Cart</button></div>
+        <div class="product"><button class="buy-now" data-product-id="10">Buy Now</button><button class="addto-cart" data-product-id="10">Add to Cart</button></div>
+    </div>
+
+    <script>
+        let h1 = document.querySelector('h1');
+        // h1.onclick = function(){
+        //     alert('Heading Clicked')
+        // }
+        // h1.onmouseover = function(){
+        //     alert('Heading hovered')
+        // }
+        document.addEventListener('click', function(event){
+            console.log('from document');
+        });
+
+        h1.addEventListener('click', function(event){
+            event.stopPropagation();
+            console.log('from h1');
+
+        });
+        document.querySelector('form').addEventListener('submit', function(e){
+            e.preventDefault();
+            let name = e.target.querySelector('input').value;
+            console.log(name)
+        });
+        document.addEventListener('change', function(){
+            console.log(event.target.value)
+        });
+
+        function greet(event){
+            console.log(`Hello ${event.target.value}`);
+        }
+
+        
+        document.addEventListener('change', greet);
+        document.removeEventListener('change', greet);
+
+
+        // let buyNow = document.querySelectorAll('.buy-now');
+        // buyNow.forEach(btn=>{
+        //     btn.addEventListener('click', buy_now)            
+        // })
+        function buy_now(event){
+            console.log(`Buy Now ${event.target.getAttribute('data-product-id')}`);
+        }
+        // let addtoCart = document.querySelectorAll('.addto-cart');
+        // addtoCart.forEach(btn=>{
+        //     btn.addEventListener('click', addto_cart)            
+        // })
+        function addto_cart(event){
+            console.log(`Add to cart ${event.target.getAttribute('data-product-id')}`);
+        }
+
+        let productWrapper = document.querySelector('.product-wrapper');
+        productWrapper.addEventListener('click', function(event){
+            if(event.target.classList.contains('addto-cart')){
+
+                addto_cart(event);
+            }
+            if(event.target.classList.contains('buy-now')){
+                buy_now(event);
+            }
+        });
+        console.log(productWrapper.children);
+    </script>
+</body>
+</html>
