@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution</title>
+</head>
+
+<body>
+    <script>
+        // Solutiion 1:
+        function printNumbers() {
+            let fromNum = prompt("Enter the first number of the range ");
+            let toNum = prompt("Enter the second number of the range ");
+            for (i = parseInt(fromNum); i <= parseInt(toNum); i++) {
+                if ((i % 4 == 0) && (i % 6 == 0)) {
+                    console.log("Quadhex");
+                } else if (i % 4 == 0) {
+                    console.log("Quad");
+                } else if (i % 6 == 0) {
+                    console.log("Hex");
+                } else {
+                    console.log(i);
+                }
+            }
+        }
+
+
+        // Solution 2
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+        function printPrimeSum() {
+            let fromNum = prompt("Enter the first number of the range ");
+            let toNum = prompt("Enter the second number of the range ");
+            // console.log(fromNum, toNum);
+            let sum = 0;
+            for (i = parseInt(fromNum); i <= parseInt(toNum); i++) {
+                if(isPrime(i)){
+                    sum = sum+i;
+                }
+                // console.log(i)
+            }
+            console.log(sum);
+        }
+        printPrimeSum();
+    </script>
+</body>
+
+</html>

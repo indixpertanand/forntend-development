@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Accordion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .accordion-container {
+            padding: 20px;
+            background: #fafafa;
+            max-width: 500px;
+            margin-inline: auto;
+            margin-top: 50px;
+        }
+
+        .accordion-heading {
+            padding: 1rem 1.5rem;
+            background: #f0f0f0;
+            margin-bottom: .3rem;
+            cursor: pointer;
+        }
+
+        .accordion-item {
+            border: 1px solid #f0f0f0;
+        }
+
+        .accordion-body {
+            display: none;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content{
+            padding: 1rem;
+            padding-top: .4rem;
+        }
+        .accordion-heading.active + .accordion-body{
+            display: block;
+            animation-name: fadeIn;
+            animation-duration: .6s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in;
+        }
+        @keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <h3 class="accordion-heading">Accordion Heading 1</h3>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo, libero alias commodi
+                            dolore neque accusamus velit molestiae, accusantium impedit dicta architecto esse, non
+                            aliquid incidunt fugit blanditiis sint numquam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-heading">Accordion Heading 2</h3>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo, libero alias commodi
+                            dolore neque accusamus velit molestiae, accusantium impedit dicta architecto esse, non
+                            aliquid incidunt fugit blanditiis sint numquam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-heading">Accordion Heading 3</h3>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo, libero alias commodi
+                            dolore neque accusamus velit molestiae, accusantium impedit dicta architecto esse, non
+                            aliquid incidunt fugit blanditiis sint numquam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-heading">Accordion Heading 4</h3>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo, libero alias commodi
+                            dolore neque accusamus velit molestiae, accusantium impedit dicta architecto esse, non
+                            aliquid incidunt fugit blanditiis sint numquam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-heading">Accordion Heading 5</h3>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo, libero alias commodi
+                            dolore neque accusamus velit molestiae, accusantium impedit dicta architecto esse, non
+                            aliquid incidunt fugit blanditiis sint numquam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        let accordionContainer = document.querySelector('.accordion-container');
+        accordionContainer.addEventListener('click', function(e){
+            if(e.target.classList.contains('accordion-heading')){
+                e.target.classList.toggle('active')
+            }
+        });
+    </script>
+</body>
+
+</html>

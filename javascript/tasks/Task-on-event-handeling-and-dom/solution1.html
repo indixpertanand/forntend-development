@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make your Paragraph Intractive</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .textContainer{
+            padding: 20px;
+            background: #fafafa;
+            max-width: 500px;
+            margin-inline: auto;
+            margin-top: 50px;
+        }
+        .highlight{
+            background: yellow;
+        }
+        .textContainer p{
+            padding: .8em 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="textContainer" style="padding-bottom: 40px;">
+            <p data-count="0">This is paragraph 1</p>
+            <p data-count="0">This is paragraph 2</p>
+            <p data-count="0">This is paragraph 3</p>
+            <p data-count="0">This is paragraph 4</p>
+        </div>
+    </main>
+    <script>
+        let container = document.querySelector('.textContainer');
+        container.addEventListener('click', function(event){
+            if(event.target.tagName === 'P'){
+                event.target.classList.toggle('highlight');
+                if(event.target.classList.contains('highlight')){
+                    let count = parseInt(event.target.dataset.count);
+                    count+=1;
+                    event.target.dataset.count = count;
+                    let text = event.target.textContent.split('( clicked')[0];
+                    text += ` ( clicked ${count} Times )`;
+                    event.target.textContent = text;
+                }
+            }
+        });        
+    </script>
+</body>
+</html>

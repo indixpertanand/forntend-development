@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Promises</title>
+</head>
+<body>
+
+    <script>
+        // let promise = new Promise((resolve, reject)=>{
+            
+        //     let status = false;
+        //     if(status){
+        //         resolve("Execution completed successfully")
+        //     }else{
+        //         reject("Error occored")
+        //     }
+        // });
+        // promise.then(data=>{
+        //     console.log(data);
+        // }).catch(error=>{
+        //     console.log(error)
+        // })
+
+
+        async function addUser() {
+            let user = await createUser(true);  
+            console.log(user)       
+        }
+        addUser();
+        function createUser(status){
+           return new Promise((resolve, reject)=>{
+            // let success = true;
+            if(status){
+                resolve("Execution completed successfully")
+            }else{
+                reject("Error occored")
+            }
+             
+           })
+        }
+
+
+        // Set Timeout
+
+        setTimeout(function(){
+            console.log('this statement ran after 3 second')
+        }, 3000);
+        let count = 0;
+        // Set Interval
+        // let counter = setInterval(function(){
+        //     if(count>=10){
+        //         clearInterval(counter);
+        //         return
+        //     }
+        //     console.log(count+=1)
+           
+        // }, 1000)
+
+        // let user = fetch('https://jsonplaceholder.typicode.com/posts/1');
+        // user.then(
+        //  result => result.json()
+        // ).then(data=>{
+        //     console.log(data.title)
+        // })
+        async function getBlog(blogId){
+            let blogResponse = await fetch('https://jsonplaceholder.typicode.com/users/');
+            let blog = await blogResponse.json();
+            console.log(blog)
+        }
+getBlog(4);
+
+    </script>
+</body>
+</html>

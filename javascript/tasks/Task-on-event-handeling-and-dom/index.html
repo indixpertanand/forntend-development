@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 1</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="textContainer" style="padding-bottom: 50px;">
+            <p data-count="0" data-id-name="1">This is paragraph 1</p>
+            <p data-count="0" data-id-name="2">This is paragraph 2</p>
+            <p data-count="0" data-id-name="3">This is paragraph 3</p>
+        </div>
+    </main>
+    <script>
+        /*
+            1. click eventhandeler and check if p is clicked
+            2. if on p toggle highlight tag
+            3. get count from data attribute and encrease by 1 set it again
+        */
+        let textContainer = document.getElementById('textContainer');
+        textContainer.addEventListener('click', function(e){
+            let targetel = e.target;
+            if(targetel.tagName === 'P'){
+                targetel.classList.toggle('highlight');
+                if(targetel.classList.contains('highlight')){
+                    let count = parseInt(targetel.dataset.count);
+                    count = count + 1;
+                    targetel.dataset.count = count;
+                    let text = targetel.textContent.split('(clicked')[0];
+                    console.log(text)
+                    targetel.textContent = `${text} (clicked ${count} times)`;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
