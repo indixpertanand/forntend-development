@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ES6</title>
+</head>
+<body>
+    
+    <script>
+        // this keyword in arrow & regular function
+        let sum = (a, b)=>{
+            console.log(this);
+            return(a + b)
+        }
+        function regSum(a, b){
+            console.log(this);
+            return(a + b)
+        }
+        
+        let user = {
+            firstName: "Anand",
+            lastName: "Singh",
+            fullName: ()=>{
+                console.log(this)
+            },
+            fullName2: function(){
+                console.log(this)
+            }
+
+        }
+        user.fullName();
+        user.fullName2();
+
+        ( function (){
+                console.log('Iife')
+            }
+
+        )();
+
+        // Destructuring.
+
+        let arr = [3, 5, 7, 8, 10, 12];
+        [one, two, three, ...a] = arr;
+        console.log(one, two, three, a);
+
+
+        let person = {
+            name: "Alice",
+            age: 25,
+            city: "Delhi"
+        };
+        
+        const {name:fullname, city} = person;
+        console.log(fullname, city)
+
+        function fullName({firstName, lastName = "Singh"}){
+            console.log(`${firstName} ${lastName}`);
+        }
+        fullName({firstName: "Anand"});
+
+        let arr1 = [1, 2, 4];
+        let arr2 = JSON.parse(JSON.stringify(arr1));
+        // arr2[3][0] = 5;
+
+        let arr3 = [...JSON.parse(JSON.stringify([...arr1])), ...JSON.parse(JSON.stringify([...arr2]))]
+        console.log(arr3);
+
+
+        let arr4 = [7, 11, ...arr1]
+        console.log(arr4);
+
+
+        function getFullName({firstName, lastName}){
+            console.log(`${firstName} ${lastName}`);
+        }
+
+        let nameArr = {firstName: "Anand", lastName: "Singh"}
+        
+        getFullName({...nameArr})
+
+    </script>
+</body>
+</html>

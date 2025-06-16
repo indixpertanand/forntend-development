@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object & Classes</title>
+</head>
+
+<body>
+
+    <script>
+        const person = {
+            name: 'Anand',
+            'age-x': 30,
+            greet: function () {
+                console.log("Hello, my name is " + this.name);
+            }
+        };
+        person.greet(); // Hello, my name is Anand
+        let keys = Object.keys(person)
+        keys.forEach(key => {
+            console.log(`${key}: ${person[key]}`)
+        });
+
+        // Object.values(person).forEach(value=>{
+        //     console.log(value)
+        // })
+
+        let entries = Object.entries(person);
+        console.log(entries)
+        entries.forEach(entry => {
+            console.log(`${entry[0]}: ${entry[1]}`)
+        });
+
+        for (const key in person) {
+            console.log(person[key])
+        }
+
+        let obj1 = {
+            number: 909764543,
+            email: 'anand.singh@indixpert.com'
+        }
+
+        Object.assign(person, obj1);
+        console.log(person)
+
+        // Class
+
+        class Person {
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email
+            }
+
+            greet() {
+                console.log(`Hello! Mr. ${this.name}`)
+            }
+            getEmail() {
+                console.log(`Your email is ${this.email}`)
+            }
+        }
+
+        let person1 = new Person("Anand", "29", "email@gmail.com");
+        Object.seal(person1);
+        person1.number = "98676554";
+        console.log(person1)
+
+        class Employee extends Person {
+            constructor(name, age, email, salary, department) {
+                super(name, age, email);
+                this.department = department;
+                this.salary = salary
+            }
+
+        }
+
+        let employee = new Employee("Anand", "29", "email@gmail.com", 30000, 'Web Development');
+
+        class Product {
+             #price; 
+             constructor(name, price) { 
+                this.name = name; 
+                this.#price = price; 
+            } 
+            getPrice() { return this.#price; }
+            setPrice(newprice){
+
+                this.#price = newprice;
+            }
+        }
+        let prd1 = new Product('Mobile Phone', '10,000')
+        prd1.name = 'xyz'
+        prd1.setPrice('20,000')
+        console.log(prd1)
+    </script>
+</body>
+
+</html>
